@@ -1,0 +1,28 @@
+<!-- new event  -->
+<p id="universityfont">New Event</p>
+<form action="/events/create" method="POST">
+    <div class="formbody">
+        <label class="label" for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label class="label" for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label class="label" for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label class="label" for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+
+        <label class="label" for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" required>
+
+        <label class="label" for="isOnline">Is Online:</label>
+        <input type="checkbox" id="isOnline" name="isOnline">
+
+        <label class="label" for="registrationLink">Registration Link:</label>
+        <input type="text" id="registrationLink" name="registrationLink">
+
+        <br><button type="submit">Create Event</button>
+    </div>
+</form>

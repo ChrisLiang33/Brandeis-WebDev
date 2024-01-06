@@ -1,0 +1,39 @@
+<!-- event index  -->
+<p id="universityfont">Events</p>
+<a href="/events/new">New Event</a><br><br>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Delivery Mode</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% events.forEach(function(event) { %>
+            <tr>
+                <td>
+                    <%= event.title %>
+                </td>
+                <td>
+                    <%= event.description %>
+                </td>
+                <td>
+                    <%= event.location %>
+                </td>
+                <td>
+                    <%= event.isOnline ? 'Online' : 'In-person' %>
+                </td>
+                <td>
+                    <div><a href="/events/<%= event._id %>">Detail</a></div>
+                    <div><a href="/events/<%= event._id %>/edit">Edit</a></div>
+                    <div>
+                        <a href="<%= `events/${event._id}/delete?_method=DELETE`%>">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+<!-- new user  -->
+<p id="universityfont">New User</p>
+<form action="/users/create" method="POST">
+    <div class="formbody">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="role">Role</label>
+        <select id="role" name="role">
+            <option value="student">Student</option>
+            <option value="alumni">Alumni</option>
+        </select>
+
+        <label for="graduationYear">Graduation Year</label>
+        <input type="number" id="graduationYear" name="graduationYear" min="1900" required>
+
+        <label for="major">Major</label>
+        <input type="text" id="major" name="major" required>
+
+        <label for="job">Job</label>
+        <input type="text" id="job" name="job">
+
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company">
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
+
+        <label for="state">State</label>
+        <input type="text" id="state" name="state">
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country">
+
+        <label for="zipCode">Zip Code</label>
+        <input type="number" id="zipCode" name="zipCode" min="10000" max="99999">
+
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio"></textarea>
+
+        <label for="interests">Interests</label>
+        <input type="text" id="interests" name="interests">
+
+        <br><button type="submit">Create</button>
+    </div>
+</form>

@@ -1,0 +1,43 @@
+<!-- job index  -->
+<p id="universityfont">Jobs</p>
+<a href="/jobs/new">New Job</a><br><br>
+<table>
+    <thead>
+        <tr>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Salary</th>
+            <th>Contact Email</th>
+            <th>Contact Phone</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% jobs.forEach(job=> { %>
+            <tr>
+                <td>
+                    <%= job.company %>
+                </td>
+                <td>
+                    <%= job.location %>
+                </td>
+                <td>
+                    <%= job.salary %>
+                </td>
+                <td>
+                    <%= job.contactEmail %>
+                </td>
+                <td>
+                    <%= job.contactPhone %>
+                </td>
+                <td>
+                    <div><a href="/jobs/<%= job._id %>">Detail</a></div>
+                    <div><a href="/jobs/<%= job._id %>/edit">Edit</a></div>
+                    <div>
+                        <a href="<%= `jobs/${job._id}/delete?_method=DELETE`%>">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <% }); %>
+    </tbody>
+</table>

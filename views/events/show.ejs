@@ -1,0 +1,38 @@
+<!-- show event  -->
+<p id="universityfont">Event Details</p>
+<div class="formbody">
+    <label for="title">Title</label>
+            <%= event.title%>
+
+    <label for="description">Description</label>
+            <%= event.description%>
+
+    <label for="location">Location</label>
+            <%= event.location%>
+
+    <label  for="startDate">Start Date</label>
+            <%= event.startDate.toDateString()%>
+
+    <label for="endDate">End Date</label>
+            <%= event.endDate.toDateString()%>
+
+    <label for="isOnline">Online</label>
+            <%= event.isOnline ? 'Online' : 'In-person'%>
+
+    <label for="registrationLink">Registration Link</label>
+            <%= event.registrationLink%>
+
+    <label for="organizer">Organizer</label>
+            <%= event.organizer.email%>
+            
+    <label for="attendees">Attendees</label>
+            <% event.attendees.forEach((attendee) => { %>
+                <%= attendee.email %>
+            <% }) %>
+    
+
+    <br><a  href="/events">All Events</a><br>
+    <br><a  href="/events/<%= event._id %>/edit">Edit Event</a>
+</div>
+
+    

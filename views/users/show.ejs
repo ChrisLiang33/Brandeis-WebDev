@@ -1,0 +1,85 @@
+<!-- show user  -->
+<p id="universityfont">User Details</p>
+<div class="formbody">
+
+    <div>Name:</div>
+    <div>
+        <%= user.name %>
+    </div>
+
+    <div>Email:</div>
+    <div>
+        <%= user.email %>
+    </div>
+
+    <div>Role:</div>
+    <div>
+        <%= user.role %>
+    </div>
+
+    <span>Graduation Year: </span>
+    <span>
+        <%= user.graduationYear %>
+    </span>
+
+    <span>Major: </span>
+    <span>
+        <%= user.major %>
+    </span>
+
+    <span>Job: </span>
+    <span>
+        <%= user.job %>
+    </span>
+
+    <span>Company: </span>
+    <span>
+        <%= user.company %>
+    </span>
+
+    <span>City: </span>
+    <span>
+        <%= user.city %>
+    </span>
+
+    <span>State: </span>
+    <span>
+        <%= user.state %>
+    </span>
+
+    <span>Country: </span>
+    <span>
+        <%= user.country %>
+    </span>
+
+    <span>Zip Code: </span>
+    <span>
+        <%= user.zipCode %>
+    </span>
+
+    <span>Bio: </span>
+    <span>
+        <%= user.bio %>
+    </span>
+
+    <span>apiToken: </span>
+    <span>
+        <%= user.apiToken %>
+    </span>
+
+
+    <span>Interests:</span>
+    <% if (user.interests && user.interests.length> 0) { %>
+        <% user.interests.forEach(function(interest) { %>
+            <div>
+                <%= interest %>
+            </div>
+            <% }) %>
+                <% } else { %>
+                    None
+                    <% } %>
+
+
+    <br><a href="/users">All Users</a><br>
+    <br><a href="/users/<%= user._id %>/edit">Edit User</a>
+</div>

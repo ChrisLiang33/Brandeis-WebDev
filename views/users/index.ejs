@@ -1,0 +1,41 @@
+<!-- all user  -->
+<p id="universityfont">User List</p>
+<a href="/users/new">New User</a><br><br>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Graduation Year</th>
+            <th>Major</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(user=> { %>
+            <tr>
+                <td>
+                    <%= user.name %>
+                </td>
+                <td>
+                    <%= user.email %>
+                </td>
+                <td>
+                    <%= user.graduationYear %>
+                </td>
+                <td>
+                    <%= user.major %>
+                </td>
+                <td>
+                    <div>
+                        <div><a href="/users/<%= user._id %>">Detail</a></div>
+                        <div><a href="/users/<%= user._id %>/edit">Edit</a></div>
+                        <div>
+                            <a href="<%= `users/${user._id}/delete?_method=DELETE`%>">Delete</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <% }); %>
+    </tbody>
+</table>

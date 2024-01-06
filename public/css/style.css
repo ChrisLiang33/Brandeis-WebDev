@@ -1,0 +1,120 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+/* nav{
+    overflow: hidden;
+    background-color: rgba(23, 112, 246, 0.822);
+} */
+
+/* nav a{
+    float:left;
+    display: block;
+    color: black;
+    padding: 25px;
+    text-decoration: none;
+    margin-left: 60px;
+}
+
+nav a:hover{
+    background-color: pink;
+    color: black;
+} */
+
+#universityfont {
+    color: navy;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#alumnifont {
+    color: black;
+    font-size: px;
+    font-weight: bold;
+}
+
+p {
+    margin-left: 60px;
+    padding: 60px;
+    text-align: left;
+}
+
+img {
+    float: left;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 30px;
+}
+
+.nav {
+    background-color: rgb(37, 197, 205);
+    box-shadow: 0 0 0.3em 0.1em rgb(205, 205, 227);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: lavender;
+    color: rgb(141, 141, 216);
+}
+
+.button {
+    font-weight: bold;
+    background-color: greenyellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fa {
+    text-decoration: none;
+    padding: 5px;
+    float: right;
+    font-weight: bold;
+    background: grey;
+    color: white;
+}
+
+.formbody {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    font-size: 16px;
+}
+
+.label {
+    padding: 10px 0;
+}
+
+footer {
+  /* background-color: lavender; */
+  /* color: rgb(125, 125, 141); */
+  /* text-align: center; */
+  /* position: fixed; */
+  margin-top: auto;
+  bottom: 0;
+  width: 96.5%;
+}

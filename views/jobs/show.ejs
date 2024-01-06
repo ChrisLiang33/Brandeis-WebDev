@@ -1,0 +1,54 @@
+<!-- show all jobs  -->
+<p id="universityfont">Job Details</p>
+<div class="form">
+    <div class="formbody">
+        <label for="title">Title:</label>
+        <div>
+            <%= job.title %>
+        </div>
+
+        <label for="company">Company:</label>
+        <div>
+            <%= job.company %>
+        </div>
+
+        <label for="location">location:</label>
+        <div>
+            <%= job.location %>
+        </div>
+
+        <label for="description">Description:</label><br>
+        <div>
+            <%= job.description %>
+        </div>
+
+        <label for="requirements">Requirements:</label><br>
+        <div>
+            <%= job.requirements %>
+        </div>
+
+        <label for="salary">Salary:</label>
+        <div>
+            <%= job.salary %>
+        </div>
+
+        <label for="contactEmail">Contact Email:</label>
+        <div>
+            <%= job.contactEmail %>
+        </div>
+
+        <label for="contactPhone">Contact Phone:</label>
+        <div>
+            <%= job.contactPhone %>
+        </div>
+
+        <label for="deadlineDate">Deadline Date:</label>
+        <div>
+            <%= job.deadlineDate %>
+        </div>
+    </div>
+
+    <br><a href="/jobs">All Jobs</a><br>
+    <br><a href="/jobs/<%= job._id %>/edit">Edit Job</a>
+
+</div>

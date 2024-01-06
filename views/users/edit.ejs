@@ -1,0 +1,61 @@
+<!-- edit user  -->
+<p id="universityfont">Edit Profile</p>
+<form action="<%=`/users/${user._id}/update?_method=PUT`%>" method="POST">
+    <div class="formbody">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= user.name %>">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="<%= user.email %>">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+
+        <label for="role">Role</label>
+        <select name="role">
+            <option value="student" <% if (user.role==='student' ) { %>
+                selected
+                <% } %>
+                    >Student
+            </option>
+            <option value="alumni" <% if (user.role==='alumni' ) { %>
+                selected
+                <% } %>
+                    >Alumni
+            </option>
+        </select>
+
+        <label for="graduationYear">Graduation Year:</label>
+        <input type="number" name="graduationYear" value="<%= user.graduationYear %>">
+
+        <label for="major">Major:</label>
+        <input type="text" name="major" value="<%= user.major %>">
+
+        <label for="job">Job:</label>
+        <input type="text" name="job" value="<%= user.job %>">
+
+        <label for="company">Company:</label>
+        <input type="text" name="company" value="<%= user.company %>">
+
+        <label for="city">City:</label>
+        <input type="text" name="city" value="<%= user.city %>">
+
+        <label for="state">State:</label>
+        <input type="text" name="state" value="<%= user.state %>">
+
+        <label for="country">Country:</label>
+        <input type="text" name="country" value="<%= user.country %>">
+
+        <label for="zipCode">Zip Code:</label>
+        <input type="number" name="zipCode" value="<%= user.zipCode %>">
+
+        <label for="bio">Bio:</label>
+        <textarea name="bio"><%= user.bio %></textarea>
+
+        <label for="interests">Interests:</label>
+        <input type="text" name="interests" value="<%= user.interests.join(', ') %>">
+
+        <br><button type="submit">Update</button>
+    </div>
+
+</form>
